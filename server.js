@@ -16,6 +16,11 @@ app.use(cookieParser())
 
 const port = 3000
 
+app.use(require('express-session')({ 
+    secret: 'mutaengine',
+    resave: true,
+    saveUninitialized: true
+  }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/api',router)
