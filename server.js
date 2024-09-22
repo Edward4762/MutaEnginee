@@ -20,7 +20,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use('/api',router)
 
-secretKey = process.env.SECRETKEY
+secretKey = "mutaengine"
 
 app.post('/register', async (req,res) =>{
     try{

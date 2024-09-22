@@ -31,7 +31,7 @@ exports.createOrder = async(req,res) => {
 exports.verifyPayment = async(req,res) => {
     const {order_id,payment_id,signature} = req.body;
 
-    const secret = process.env.secret
+    const secret = "vBdiYppzPexU3wRrk4r5zUvJ"
     const hmac = crypto.createHmac("sha256", secret)
     hmac.update(order_id + '|' + payment_id)
     const generatedSignature = hmac.digest("hex")

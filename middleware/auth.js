@@ -6,7 +6,7 @@ const auth = (req,res,next) => {
         res.status(403).send(`Pls login first`)
     }
 
-    secretKey = process.env.SECRETKEY
+    secretKey = "mutaengine"
     try{
         const decode = jwt.verify(token,secretKey)
         req.user = decode
