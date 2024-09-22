@@ -14,7 +14,7 @@ const app = express()
 app.use(express.json())
 app.use(cookieParser())
 
-const port = process.env.PORT
+const port = 3000
 
 app.use(passport.initialize());
 app.use(passport.session());
