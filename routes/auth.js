@@ -27,6 +27,7 @@ router.get(
 	passport.authenticate("google", {
 		successRedirect: `http://localhost:8080/`,
 		failureRedirect: "/login/failed",
+		session: false,
 	})
 );
 
